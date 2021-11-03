@@ -28,4 +28,10 @@ public class PostsApiController {
     public PostsResponseDto findById (@PathVariable Long id){ //아아 경로의 id값을 가져오는거구나
         return postsService.findById(id);
     }
+
+    @DeleteMapping("api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postsService.delete(id);
+        return id;
+    }
 }
