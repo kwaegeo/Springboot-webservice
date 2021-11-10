@@ -10,7 +10,7 @@ before_install:
   - chmod +x gradlew
 
 # Travis CI 서버의 Home
-cache:              #그레들을 통해 의존성을 받게되면 디렉토리에 캐쉬해서 같은 의존ㄴ성은 다시 받지 않도록 설정하
+cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
